@@ -19,7 +19,7 @@ h1 {
   text-align: center;
   margin-top: 2rem;
   font-size: 5rem;
-  color: rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 1);
 
   text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white,
     1px 1px 0 white; /* Create the white outline effect */
