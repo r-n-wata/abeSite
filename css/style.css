@@ -10,8 +10,8 @@ body {
   background-size: cover;
   background-position: center;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 h1 {
@@ -27,28 +27,21 @@ h1 {
     -0.5px 0.5px 0 #9a9999, 1px 1px 0 #9a9999; /* Create the white outline effect */
 }
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-  body {
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
-}
 /* Large devices (phones, 600px and down) */
 @media only screen and (min-width: 600px) {
   body {
     width: 100vw;
     height: 100vh;
-    background-image: url('../assets/05.jpg'), url('../assets/10.jpg'),
-      url('../assets/11.jpg');
-    background-repeat: no-repeat, no-repeat, no-repeat;
-    background-size: 33.8333% auto; /* Each image takes 33.3% of the width */
-    background-position: 0 0, 49.33% 0, 100% 0; /* Position each image next to each other */
+    background-image: url('../assets/60.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; /* Each image takes 33.3% of the width */
+    background-position: center; /* Position each image next to each other */
   }
 
   h1 {
-    font-size: 9rem;
-    margin: 0;
+    font-size: 3rem;
+    text-shadow: -0.5px -0.5px 0 #c2c1c1, 0.5px -0.5px 0 #c2c1c1,
+      -0.5px 0.5px 0 #c2c1c1, 1px 1px 0 #c2c1c1; /* Create the white outline effect */
   }
   img {
     width: 100%;
