@@ -15,16 +15,23 @@ body {
 }
 
 h1 {
+  font-family: 'Playfair Display', serif;
   text-align: center;
+  margin-top: 2rem;
   font-size: 5rem;
   color: rgba(0, 0, 0, 0.2);
+
   text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white,
     1px 1px 0 white; /* Create the white outline effect */
 }
 
 /* Extra small devices (phones, 600px and down) */
-
-/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  body {
+    align-items: flex-start;
+  }
+}
+/* Large devices (phones, 600px and down) */
 @media only screen and (min-width: 600px) {
   body {
     width: 100vw;
@@ -39,7 +46,7 @@ h1 {
 
   h1 {
     font-size: 9rem;
-    font-family: 'Playfair Display', serif;
+    margin-top: 0;
   }
   img {
     width: 100%;
