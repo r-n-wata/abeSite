@@ -21,7 +21,7 @@ function Header() {
   return (
     <header className="mobile:-mx-16 mobile:mt-4 mobile:pl-4 flex justify-around mt-8 mx-28 text-gray-800 z-10">
       <Link to="/">
-        <Title addClass="mobile:text-[0.6rem] " />
+        <Title addClass="mobile:text-[0.7rem] " />
       </Link>
 
       <nav className={` z-20 text-sm relative`}>

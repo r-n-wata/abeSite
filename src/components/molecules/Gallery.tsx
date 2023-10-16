@@ -7,7 +7,13 @@ function Gallery() {
         {homeGalleryCol.map((image, i) => {
           return (
             <div className={` ${image?.class}`} key={i}>
-              <img alt="gallery" className="o" src={image.name} key={i} />
+              <img
+                alt="gallery"
+                className="o"
+                src={image.name}
+                key={i}
+                loading="lazy"
+              />
             </div>
           );
         })}

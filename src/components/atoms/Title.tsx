@@ -8,7 +8,7 @@ function Title({ addClass }: TitleProps) {
       className={`tracking-widest text-gray-700 text-xl ${addClass} font-extrabold mobile:font-black`}
     >
       Abraham Illescas
-      <span className="italic text-sm mobile:text-[0.6rem]">(Abe)</span>
+      <span className="italic text-sm mobile:text-[0.7rem]">(Abe)</span>
     </h1>
   );
 }
