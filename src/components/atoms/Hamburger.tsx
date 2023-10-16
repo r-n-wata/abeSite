@@ -6,12 +6,12 @@ interface HamburgerProps {
 function Hamburger({ showMenu, toggleMenu }: HamburgerProps) {
   return (
     <button
-      className={`hidden mobile:flex  -top-2 right-0 z-40 w-10 h-10 text-gray-800  mr-6 relative justify-center items-center `}
+      className={`hidden mobile:flex -top-2 -right-2 z-40 w-10 h-10 text-gray-800  mr-6 relative justify-center items-center `}
       onClick={() => {
         toggleMenu();
       }}
     >
-      <div className="absolute w-5 transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2">
+      <div className="absolute w-5 transform -translate-x-1/2 -translate-y-1/2">
         <span
           className={`absolute h-0.5 w-6 transform transition duration-300 ease-in-out bg-gray-600 ${
             showMenu ? 'bg-gray-600 rotate-45 delay-200' : '-translate-y-1.5'

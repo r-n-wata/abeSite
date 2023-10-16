@@ -25,23 +25,6 @@ function Header() {
       </Link>
 
       <nav className={` z-20 text-sm relative`}>
-        {/* <button
-          className={`hidden mr-4 mobile:block ${
-            showMenu === 'close' && 'mobile:block'
-          }`}
-          onClick={openMenu}
-        >
-          open
-        </button>
-        <button
-          className={`hidden z-50  w-10 closeButton absolute right-8 top-4  ${
-            showMenu && 'mobile:block'
-          }`}
-          onClick={closeMenu}
-        >
-          close
-        </button> */}
-
         <Hamburger showMenu={showMenu} toggleMenu={toggleMenu} />
         <ul
           className={`flex list-none justify-end items-start flex-1 mobile:fixed  mobile:flex-col  mobile:-top-2 mobile:-right-0 mobile:bg-gray-50 mobile:h-screen mobile:justify-start mobile:items-start  mobile:pt-10  transition-right duration-500 ease-out  z-10   ${
@@ -51,7 +34,7 @@ function Header() {
           {' '}
           {navLinks.map((navLink) => (
             <li
-              className="text-sm ml-12 relative flex justify-center mobile:text-[0.7rem] mobile:ml-0 mobile:py-2 mobile:hover:bg-gray-100 mobile:w-full mobile:justify-start mobile:px-4 mobile:overflow-hidden mobile:transition-all mobile:duration-300 mobile:ease-in-out"
+              className="text-sm ml-12 relative flex justify-center mobile:text-[0.7rem] mobile:mt-4 mobile:ml-0 mobile:py-2 mobile:hover:bg-gray-100 mobile:w-full mobile:justify-start mobile:px-4 mobile:overflow-hidden mobile:transition-all mobile:duration-300 mobile:ease-in-out"
               key={navLink.id}
             >
               <div
