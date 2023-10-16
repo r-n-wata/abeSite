@@ -1,14 +1,9 @@
-import { useState } from 'react';
-
 interface HamburgerProps {
   showMenu: boolean;
   toggleMenu: () => void;
 }
 
 function Hamburger({ showMenu, toggleMenu }: HamburgerProps) {
-  const [isOpen, setIsOpen] = useState(showMenu);
-  const genericHamburgerLine = `h-1 w-6 my-1 rounded-full bg-black transition ease transform duration-300`;
-  console.log(isOpen);
   return (
     <button
       className={`hidden mobile:flex  -top-2 right-0 z-40 w-10 h-10 text-gray-800 focus:outline mr-6 relative `}
