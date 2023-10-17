@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Title from '../../atoms/Title';
-import { navLinks } from '../../../utils/navLinks';
+import NavLinks from '../../atoms/NavLinks';
 import './Header.css';
 import Hamburger from '../../atoms/Hamburger';
 
@@ -10,6 +10,7 @@ function Header() {
     isOpenSubMenu: false,
     id: NaN,
   });
+  const { navs } = NavLinks();
 
   const [showMenu, setShowMenu] = useState<boolean>(false);
 
@@ -32,7 +33,7 @@ function Header() {
           }`}
         >
           {' '}
-          {navLinks.map((navLink) => (
+          {navs.map((navLink) => (
             <li
               className="text-sm ml-12 relative flex justify-center mobile:text-[0.7rem] mobile:mt-4 mobile:ml-0 mobile:py-2 mobile:hover:bg-gray-100 mobile:w-full mobile:justify-start mobile:px-4 mobile:overflow-hidden mobile:transition-all mobile:duration-300 mobile:ease-in-out"
               key={navLink.id}

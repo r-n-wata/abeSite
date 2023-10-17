@@ -3,6 +3,7 @@ import Header from '../molecules/Header/Header';
 import Gallery from '../molecules/Gallery';
 import Footer from '../molecules/Footer';
 import Spinner from '../atoms/Spinner';
+import LanguageToggleButton from '../atoms/LanguageToggleButton';
 
 function Home() {
   const [showSpinner, setShowSpinner] = useState<boolean>(true);
@@ -26,6 +27,7 @@ function Home() {
         <div className="relative h-screen w-screen overflow-x-hidden ">
           <Header />
           <main className="mb-20">
+            <LanguageToggleButton />
             <Gallery />
           </main>
           <Footer addClass="mt-20" />
