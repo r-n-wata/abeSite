@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { useTranslation } from 'react-i18next';
 import { LanguageContext } from '../../context/LanguageContext';
 
@@ -7,8 +7,8 @@ const LanguageToggleButton = () => {
   const { language, changeLanguage } = useContext(LanguageContext);
 
   const handleLanguageChange = (lng: string) => {
-    i18n.changeLanguage(lng); // Update i18n language
-    changeLanguage(lng); // Update context language
+    i18n.changeLanguage(lng);
+    changeLanguage(lng);
   };
 
   return (
