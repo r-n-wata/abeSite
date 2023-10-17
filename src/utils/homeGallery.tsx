@@ -33,7 +33,7 @@ export const homeGalleryCol: IHomeGallery[] = [
     class: 'col-span-2 row-span-2',
   },
   {
-    name: '/assets/homepage/47.jpg',
+    name: '/assets/homepage/44.jpg',
     class: '',
   },
   {
@@ -69,7 +69,58 @@ export const homeGalleryCol: IHomeGallery[] = [
     class: 'col-span-2 row-span-2',
   },
   {
+    name: '/assets/homepage/09.jpg',
+    class: '',
+  },
+  {
+    name: '/assets/homepage/20.jpg',
+    class: '',
+  },
+  {
+    name: '/assets/homepage/06.jpg',
+    class: 'col-span-2 row-span-2',
+  },
+  {
+    name: '/assets/homepage/19.jpg',
+    class: '',
+  },
+  {
     name: '/assets/homepage/31.jpg',
+    class: '',
+  },
+  {
+    name: '/assets/homepage/07.jpg',
+    class: 'col-span-2 row-span-2',
+  },
+  {
+    name: '/assets/homepage/16.jpg',
+    class: '',
+  },
+
+  {
+    name: '/assets/homepage/80.jpeg',
+    class: '',
+  },
+  {
+    name: '/assets/homepage/24.jpeg',
+    class: 'col-span-2 row-span-2',
+  },
+  {
+    name: '/assets/homepage/17.jpeg',
+    class: '',
+  },
+
+  {
+    name: '/assets/homepage/21.jpeg',
+    class: '',
+  },
+
+  {
+    name: '/assets/homepage/19.jpeg',
+    class: '',
+  },
+  {
+    name: '/assets/homepage/02.jpeg',
     class: '',
   },
   {

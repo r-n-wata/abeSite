@@ -55,7 +55,7 @@ export const navLinks = [
   },
   {
     id: 4,
-    name: 'Biodimentional',
+    name: 'Two Dimensional',
     subNav: [
       {
         name: 'Biodimentional',
