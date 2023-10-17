@@ -5,7 +5,7 @@ i18n.use(initReactI18next).init({
   resources: {
     en: {
       translation: {
-        sculpture: 'Scultpure',
+        sculpture: 'Sculpture',
         installation: 'Installation',
         workshop: 'Workshop + Food Forest',
         twoDimensional: 'Two Dimensional',
@@ -13,7 +13,7 @@ i18n.use(initReactI18next).init({
     },
     es: {
       translation: {
-        escultura: 'Escultura',
+        sculpture: 'Escultura',
         installation: 'Instalacion',
         workshop: 'Taller + Bosque de Alimentos',
         twoDimensional: 'Bidimensional',
