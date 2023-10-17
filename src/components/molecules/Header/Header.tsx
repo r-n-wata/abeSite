@@ -29,14 +29,15 @@ function Header() {
       <nav className={` z-20 text-sm relative`}>
         <Hamburger showMenu={showMenu} toggleMenu={toggleMenu} />
         <ul
-          className={`flex list-none justify-end items-start flex-1 mobile:fixed  mobile:flex-col  mobile:-top-2 mobile:-right-0 mobile:bg-gray-50 mobile:h-screen mobile:justify-start mobile:items-start  mobile:pt-10  transition-right duration-500 ease-out  z-10   ${
-            !showMenu && ' mobile:right-[-10rem] '
+          className={`flex list-none justify-end items-start flex-1 mobile:fixed  mobile:flex-col  mobile:-top-2 mobile:-right-0 mobile:bg-gray-50 mobile:h-screen mobile:justify-start mobile:items-start  mobile:pt-10  transition-right duration-500 ease-out  z-10  whitespace-pre-wrap  mobile:max-w-[160px] ${
+            !showMenu && ' mobile:right-[-14rem] '
           }`}
+          // Adjust the max width to your desired value
         >
           {' '}
           {navs.map((navLink) => (
             <li
-              className="text-sm ml-12 relative flex justify-center mobile:text-[0.7rem] mobile:mt-4 mobile:ml-0 mobile:py-2 mobile:hover:bg-gray-100 mobile:w-full mobile:justify-start mobile:px-4 mobile:overflow-hidden mobile:transition-all mobile:duration-300 mobile:ease-in-out"
+              className="text-sm ml-12 relative flex justify-center mobile:text-[0.7rem] mobile:mt-4 mobile:ml-0 mobile:py-2 mobile:hover:bg-gray-100 mobile:w-full mobile:justify-start mobile:px-4 mobile:overflow-hidden mobile:transition-all mobile:duration-300 mobile:ease-in-out whitespace-pre-wrap px-2"
               key={navLink.id}
             >
               <div
