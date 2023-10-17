@@ -4,6 +4,7 @@ import Title from '../../atoms/Title';
 import NavLinks from '../../atoms/NavLinks';
 import './Header.css';
 import Hamburger from '../../atoms/Hamburger';
+import LanguageToggleButton from '../../atoms/LanguageToggleButton';
 
 function Header() {
   const [isOpenSubMenu, setIsOpenSubMenu] = useState({
@@ -78,6 +79,13 @@ function Header() {
               </div>
             </li>
           ))}
+          <LanguageToggleButton
+            styles={`${
+              showMenu
+                ? 'right-28 transition-right duration-700 ease-out  z-10 bottom-4'
+                : 'mobile:-right-32 mobile:transition-right mobile:duration-700 mobile:ease-out  mobile:z-10'
+            }`}
+          />
         </ul>
       </nav>
     </header>

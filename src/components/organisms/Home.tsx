@@ -27,7 +27,7 @@ function Home() {
         <div className="relative h-screen w-screen overflow-x-hidden ">
           <Header />
           <main className="mb-20">
-            <LanguageToggleButton />
+            <LanguageToggleButton styles="mobile:hidden" />
             <Gallery />
           </main>
           <Footer addClass="mt-20" />

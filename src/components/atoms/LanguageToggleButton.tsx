@@ -2,7 +2,11 @@ import React, { useContext } from 'react';
 import { useTranslation } from 'react-i18next';
 import { LanguageContext } from '../../context/LanguageContext';
 
-const LanguageToggleButton = () => {
+interface LanguageToggleButtonProps {
+  styles?: string;
+}
+
+const LanguageToggleButton = ({ styles }: LanguageToggleButtonProps) => {
   const { i18n } = useTranslation();
   const { language, changeLanguage } = useContext(LanguageContext);
 
@@ -11,11 +15,13 @@ const LanguageToggleButton = () => {
     changeLanguage(lng);
   };
 
+  // Note: styles prop is not being used in this component
+
   return (
-    <div className="flex fixed bottom-4 right-4">
+    <div className={`flex fixed bottom-4 right-4 ${styles}`}>
       <div
         onClick={() => handleLanguageChange(language === 'en' ? 'es' : 'en')}
-        className="w-8 h-8 transition-transform transform ease-in-out duration-300  hover:translate-y-0 hover:scale-110  "
+        className="w-8 h-8 transition-transform transform ease-in-out duration-300  hover:translate-y-0 hover:scale-110  mobile:w-6 mobile:h-6"
       >
         <img
           src={
