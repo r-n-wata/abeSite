@@ -1,10 +1,15 @@
-import { homeGalleryCol } from '../../utils/homeGallery';
+type Images = {
+  images: {
+    name: string;
+    class?: string;
+  }[];
+};
 
-function Gallery() {
+function Gallery({ images }: Images) {
   return (
     <div className="w-full flex justify-center mt-10 mobile:mt-6">
       <div className="grid grid-cols-2 gap-2 w-1/2 mobile:w-3/4 mobile:gap-1">
-        {homeGalleryCol.map((image, i) => {
+        {images.map((image, i) => {
           return (
             <div
               className={` ${image?.class + ' flex justify-center'}`}

@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { homeGalleryCol } from '../../utils/homeGallery';
 import Header from '../molecules/Header/Header';
 import Gallery from '../molecules/Gallery';
 import Footer from '../molecules/Footer';
@@ -28,7 +29,7 @@ function Home() {
           <Header />
           <main className="mb-20">
             <LanguageToggleButton styles="mobile:hidden" />
-            <Gallery />
+            <Gallery images={homeGalleryCol} />
           </main>
           <Footer addClass="mt-20" />
         </div>
