@@ -1,27 +1,11 @@
-import {
-    createBrowserRouter,
-    RouterProvider,
-  } from "react-router-dom";
-  import Home from "./components/organisms/Home";
-  import Start from "./components/organisms/Start";
+import Route from './Route';
 
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Start />,
-    },
-    {
-      path: "/home",
-      element: <Home />,
-    }
-  ]);
-
-
-function Route() {
-    return (  
-        <RouterProvider router={router} />
-
-    );
+function App() {
+  return (
+    <>
+      <Route />
+    </>
+  );
 }
 
-export default Route;
+export default App;

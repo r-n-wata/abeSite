@@ -6,7 +6,10 @@ function Gallery() {
       <div className="grid grid-cols-2 gap-2 w-1/2 mobile:w-3/4 mobile:gap-1">
         {homeGalleryCol.map((image, i) => {
           return (
-            <div className={` ${image?.class}`} key={i}>
+            <div
+              className={` ${image?.class + ' flex justify-center'}`}
+              key={i}
+            >
               <img
                 alt="gallery"
                 className="o"
