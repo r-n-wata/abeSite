@@ -1,3 +1,5 @@
+import LazyLoad from 'react-lazy-load';
+
 type Images = {
   images: {
     name: string;
@@ -15,13 +17,15 @@ function Gallery({ images }: Images) {
               className={` ${image?.class + ' flex justify-center'}`}
               key={i}
             >
-              <img
-                alt="gallery"
-                className="o"
-                src={image.name}
-                key={i}
-                loading="lazy"
-              />
+              <LazyLoad height={'auto'} offset={0}>
+                <img
+                  alt="gallery"
+                  className="o"
+                  src={image.name}
+                  key={i}
+                  loading="lazy"
+                />
+              </LazyLoad>
             </div>
           );
         })}

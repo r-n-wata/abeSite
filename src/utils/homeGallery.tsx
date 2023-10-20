@@ -116,10 +116,6 @@ export const homeGalleryCol: IHomeGallery[] = [
     class: '',
   },
   {
-    name: '/assets/homepage/13.jpg',
-    class: 'col-span-2 row-span-2',
-  },
-  {
     name: '/assets/homepage/19.jpeg',
     class: 'desktop:hidden',
   },
