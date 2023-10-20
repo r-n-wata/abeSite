@@ -7,10 +7,10 @@ import Hamburger from '../../atoms/Hamburger';
 import LanguageToggleButton from '../../atoms/LanguageToggleButton';
 
 function Header() {
-  const [isOpenSubMenu, setIsOpenSubMenu] = useState({
-    isOpenSubMenu: false,
-    id: NaN,
-  });
+  // const [isOpenSubMenu, setIsOpenSubMenu] = useState({
+  //   isOpenSubMenu: false,
+  //   id: NaN,
+  // });
   const { navs } = NavLinks();
 
   const [showMenu, setShowMenu] = useState<boolean>(false);
@@ -37,26 +37,29 @@ function Header() {
           {' '}
           {navs.map((navLink) => (
             <li
-              className="text-[0.95rem] ml-12 relative flex justify-center mobile:text-[0.7rem] mobile:mt-4 mobile:ml-0 mobile:py-2 mobile:hover:bg-gray-100 mobile:w-full mobile:justify-start mobile:px-4 mobile:overflow-hidden mobile:transition-all mobile:duration-300 mobile:ease-in-out whitespace-pre-wrap px-2"
+              className="text-[0.95rem] ml-12 relative flex justify-center items-center jmobile:text-[0.7rem] mobile:mt-4 mobile:ml-0 mobile:py-2 mobile:hover:bg-gray-100 mobile:w-full mobile:justify-start mobile:px-4 mobile:overflow-hidden mobile:transition-all mobile:duration-300 mobile:ease-in-out whitespace-pre-wrap px-2"
               key={navLink.id}
             >
               <div
-                className="cursor-pointer"
-                onMouseEnter={() =>
-                  setIsOpenSubMenu({
-                    isOpenSubMenu: true,
-                    id: navLink.id,
-                  })
-                }
-                onMouseLeave={() =>
-                  setIsOpenSubMenu({
-                    isOpenSubMenu: false,
-                    id: navLink.id,
-                  })
-                }
+                className="cursor-pointer group text-gray-600 transition duration-300"
+                // onMouseEnter={() =>
+                //   setIsOpenSubMenu({
+                //     isOpenSubMenu: true,
+                //     id: navLink.id,
+                //   })
+                // }
+                // onMouseLeave={() =>
+                //   setIsOpenSubMenu({
+                //     isOpenSubMenu: false,
+                //     id: navLink.id,
+                //   })
+                // }
               >
                 {navLink.name}
-                {isOpenSubMenu.isOpenSubMenu &&
+
+                <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-gray-600"></span>
+
+                {/* {isOpenSubMenu.isOpenSubMenu &&
                   isOpenSubMenu.id === navLink.id && (
                     <ul
                       className={`subNav bg-gray-50 w-full flex flex-col items-center mobile:items-start absolute mobile:relative mobile:h-full mobile:bg-gray-100 mobile:hover:bg-gray-150 ${
@@ -76,7 +79,7 @@ function Header() {
                         </li>
                       ))}
                     </ul>
-                  )}
+                  )} */}
               </div>
             </li>
           ))}

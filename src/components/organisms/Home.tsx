@@ -17,6 +17,7 @@ function Home() {
 
     return () => clearTimeout(delay); // Clear the timeout on component unmount
   }, []);
+
   return (
     <>
       {' '}
