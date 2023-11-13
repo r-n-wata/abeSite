@@ -14,14 +14,15 @@ function NavLinks() {
         name: t('installation'),
         // subNav: [],
       },
-      {
-        id: 3,
-        name: t('workshop'),
-        // subNav: [],
-      },
+
       {
         id: 4,
         name: t('twoDimensional'),
+        // subNav: [],
+      },
+      {
+        id: 3,
+        name: t('workshop'),
         // subNav: [],
       },
     ],

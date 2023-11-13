@@ -10,6 +10,7 @@ module.exports = {
       // => @media (min-width: 1024px) { ... }
       desktop: '1280px',
       // => @media (min-width: 1280px) { ... }
+      largerDesktop: '1536px',
     },
   },
   plugins: [],

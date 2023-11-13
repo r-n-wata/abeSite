@@ -7,16 +7,20 @@ i18n.use(initReactI18next).init({
       translation: {
         sculpture: 'Sculpture',
         installation: 'Installation',
-        workshop: 'Workshop + Food Forest',
+        workshop: 'Workshop + Food Forest Garden',
         twoDimensional: 'Two Dimensional',
+        about: 'About',
+        contact: 'Contact',
       },
     },
     es: {
       translation: {
         sculpture: 'Escultura',
         installation: 'Instalacion',
-        workshop: 'Taller + Bosque de Alimentos',
+        workshop: 'Taller + Bosque Comestible',
         twoDimensional: 'Bidimensional',
+        about: 'About',
+        contact: 'Contacto',
       },
     },
   },
