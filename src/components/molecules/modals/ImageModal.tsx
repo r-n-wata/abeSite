@@ -20,7 +20,7 @@ function ImageModal({
             <img
               src={image.image}
               alt="gallery"
-              className="max-w-[80rem]  max-h-[48rem] object-contain mobile:max-w-[25rem] mobile:max-h-[25rem]"
+              className="max-w-[80rem]  max-h-[48rem] object-contain mobile:max-w-[23rem] mobile:max-h-[25rem]"
             />
             <div className="rounded-md mt-6 w-52 text-gray-900 text-center bg-gray-500 py-4 mobile:text-sm mobile:mt-4 mobile:w-36 mobile:py-2">
               <h4>{image.dataSheet.title}</h4>
