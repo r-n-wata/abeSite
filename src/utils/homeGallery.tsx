@@ -41,6 +41,12 @@ export const homeGalleryCol: IHomeGallery[] = [
   {
     name: '/assets/homepage/12.jpg',
     class: '',
+    dataSheet: {
+      title: 'Erosión del suelo, 2023.',
+      description:
+        'Madera, vainas de flamboyán, pintura acrílica, hilo, clavos.',
+      size: '75cm x 57cm x 10cm',
+    },
   },
   {
     name: '/assets/homepage/38.jpg',
@@ -98,10 +104,22 @@ export const homeGalleryCol: IHomeGallery[] = [
   {
     name: '/assets/homepage/43.jpg',
     class: '',
+    dataSheet: {
+      title: 'Selva 2023.',
+      description:
+        'Impresión de vainas sobre tela, pintura acrílica. Madera de tzalam, vainas de flamboyán, bejuco, pintura acrílica.',
+      size: '174cm x 85cm 142cm x 34cm x 34cm',
+    },
   },
+
   {
     name: '/assets/homepage/50.jpg',
     class: '',
+    dataSheet: {
+      title: 'Estalactita 2023',
+      description: 'Vainas de flamboyán, madera, hilo.',
+      size: '225cm x 32cm x 32cm',
+    },
   },
   {
     name: '/assets/homepage/2-3.jpg',
