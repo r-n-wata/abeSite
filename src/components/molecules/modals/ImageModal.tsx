@@ -24,7 +24,7 @@ function ImageModal({
             />
 
             {image.dataSheet.description && (
-              <div className="rounded-md mt-6 w-52 text-gray-800 text-center bg-gray-300 py-4 px-2 mobile:text-sm mobile:mt-4 mobile:py-2 mobile:text-[0.5rem] mobile:px-4 mobile:w-60">
+              <div className="rounded-md mt-6 w-52 text-gray-800 text-center bg-gray-300 py-4 px-2 mobile:text-sm mobile:mt-4 mobile:py-2 mobile:text-[0.5rem] mobile:px-2 mobile:w-56">
                 <h4 className="font-extrabold mobile:font-black ">
                   {image.dataSheet.title}
                 </h4>
