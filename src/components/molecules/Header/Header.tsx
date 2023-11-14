@@ -11,10 +11,6 @@ import SideNav from '../SideNav';
 import SideNavLinks from '../../atoms/SideNavLinks';
 
 function Header() {
-  // const [isOpenSubMenu, setIsOpenSubMenu] = useState({
-  //   isOpenSubMenu: false,
-  //   id: NaN,
-  // });
   const { navs } = NavLinks();
 
   const [showMenu, setShowMenu] = useState<boolean>(false);
@@ -45,58 +41,34 @@ function Header() {
           className={`flex list-none justify-end items-start flex-1 mobile:fixed  mobile:flex-col  mobile:-top-2 mobile:-right-0 mobile:bg-gray-50 mobile:h-screen mobile:justify-start mobile:items-start  mobile:pt-10  transition-right duration-500 ease-out  z-10  whitespace-pre-wrap  mobile:max-w-[160px] ${
             !showMenu && ' mobile:right-[-14rem] '
           }`}
-          // Adjust the max width to your desired value
         >
           {' '}
-          {navs.map((navLink) => (
-            <li
-              className="text-[0.95rem] ml-12 relative flex justify-center items-center mobile:text-[0.7rem] mobile:mt-4 mobile:ml-0 mobile:py-2 mobile:hover:bg-gray-100 mobile:w-full mobile:justify-start mobile:px-4 mobile:overflow-hidden mobile:transition-all mobile:duration-300 mobile:ease-in-out whitespace-pre-wrap px-2"
-              key={navLink.id}
-            >
-              <div
-                className="cursor-pointer group text-gray-600 transition duration-300"
-                // onMouseEnter={() =>
-                //   setIsOpenSubMenu({
-                //     isOpenSubMenu: true,
-                //     id: navLink.id,
-                //   })
-                // }
-                // onMouseLeave={() =>
-                //   setIsOpenSubMenu({
-                //     isOpenSubMenu: false,
-                //     id: navLink.id,
-                //   })
-                // }
+          {navs.map((navLink) => {
+            const navLinksArray =
+              navLink.name.replace(' ', '').split('+') || [];
+            console.log(navLinksArray);
+            return (
+              <li
+                className="text-[0.95rem] ml-12 relative flex justify-center items-center mobile:text-[0.7rem] mobile:mt-4 mobile:ml-0 mobile:py-2 mobile:hover:bg-gray-100 mobile:w-full mobile:justify-start mobile:px-4 mobile:overflow-hidden mobile:transition-all mobile:duration-300 mobile:ease-in-out whitespace-pre-wrap px-2"
+                key={navLink.id}
               >
-                {navLink.name}
+                <div className="cursor-pointer group text-gray-600 transition duration-300">
+                  {navLink.name.includes('+') ? (
+                    <>
+                      {navLinksArray[0]}{' '}
+                      <span className="text-green-600">+</span>{' '}
+                      {navLinksArray.slice(1)}{' '}
+                    </>
+                  ) : (
+                    navLink.name
+                  )}
 
-                <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-gray-600"></span>
-
-                {/* {isOpenSubMenu.isOpenSubMenu &&
-                  isOpenSubMenu.id === navLink.id && (
-                    <ul
-                      className={`subNav bg-gray-50 w-full flex flex-col items-center mobile:items-start absolute mobile:relative mobile:h-full mobile:bg-gray-100 mobile:hover:bg-gray-150 ${
-                        isOpenSubMenu.isOpenSubMenu &&
-                        isOpenSubMenu.id === navLink.id
-                          ? 'open'
-                          : ''
-                      }`}
-                    >
-                      {navLink.subNav?.map((subLink, i) => (
-                        <li
-                          key={i}
-                          className="w-full text-center py-2 text-[0.7rem] text-gray-500 hover:bg-gray-100 mobile:text-left mobile:py-1 mobile:px-4 mobile:hover:bg-gray-150 mobile:text-[0.6rem]"
-                        >
-                          <span className="hidden mobile:block">- </span>
-                          <Link to={subLink.href}>{subLink.name}</Link>
-                        </li>
-                      ))}
-                    </ul>
-                  )} */}
-              </div>
-            </li>
-          ))}{' '}
-          <div className="mt-10 border-t-4 w-full hidden mobile:block mobile:text-[0.7rem] relative">
+                  <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-gray-600"></span>
+                </div>
+              </li>
+            );
+          })}{' '}
+          <div className="mt-10 border-t-2 border-gray-400 w-full hidden mobile:block mobile:text-[0.7rem] relative">
             <SideNav
               navs={leftNavs}
               styles="mobile:flex  "

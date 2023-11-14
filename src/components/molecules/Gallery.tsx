@@ -9,6 +9,8 @@ type Images = {
     class?: string;
     dataSheet?: {
       title: string;
+      description?: string;
+      size?: string;
     };
   }[];
 };
@@ -19,17 +21,22 @@ function Gallery({ images }: Images) {
     image: '',
     dataSheet: {
       title: '',
+      description: '',
+      size: '',
     },
   });
 
   const toggleModal = (
     image: string,
-
-    info: { title: string } = { title: '' }
+    info: { title: string; description?: string; size?: string } = { title: '' }
   ) => {
-    setSelectedInfo((_prevState) => ({
+    setSelectedInfo((prevState) => ({
       image: image,
-      dataSheet: info || ({} as { title: string }),
+      dataSheet: {
+        title: info.title,
+        description: info.description || '',
+        size: info.size || '',
+      },
     }));
     setShowModal(!showModal);
   };
