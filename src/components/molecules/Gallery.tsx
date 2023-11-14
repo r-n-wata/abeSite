@@ -48,7 +48,9 @@ function Gallery({ images }: Images) {
           {images.map((image, i) => {
             return (
               <div
-                className={` ${image?.class + ' flex justify-center'}`}
+                className={` ${
+                  image?.class + ' flex justify-center hover:cursor-pointer'
+                }`}
                 onClick={() => toggleModal(image.name, image.dataSheet)} // Pass the image name to toggleModal
                 key={i}
               >
@@ -64,7 +66,7 @@ function Gallery({ images }: Images) {
                     {i === 0 && (
                       <div className="overlay absolute inset-0 bg-black bg-opacity-50 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex justify-center items-center hover:cursor-pointer">
                         <Link
-                          to={'https://youtu.be/fy-jxXuDiqU'}
+                          to={'https://youtu.be/7SMI3_1zKmk'}
                           className="underline underline-offset-4 hover:text-green-300 text-lg mobile:text-sm"
                         >
                           Video
