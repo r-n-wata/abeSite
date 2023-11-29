@@ -1,26 +1,16 @@
-import { useEffect, useState, useContext } from 'react';
+import { useEffect, useState } from 'react';
 import { homeGalleryCol } from '../../utils/homeGallery';
-import { useTranslation } from 'react-i18next';
-import { LanguageContext } from '../../context/LanguageContext';
-import { rightNavs } from '../../utils/rightNavs';
 import Header from '../molecules/Header/Header';
 import Gallery from '../molecules/Gallery';
 import Footer from '../molecules/Footer';
 import Spinner from '../atoms/Spinner';
 import SideNav from '../molecules/SideNav';
 import SideNavLinks from '../atoms/SideNavLinks';
+import RightNav from '../atoms/RightNav';
 
 function Home() {
   const [showSpinner, setShowSpinner] = useState<boolean>(true);
   const { navs: leftNavs } = SideNavLinks();
-
-  const { i18n } = useTranslation();
-  const { language, changeLanguage } = useContext(LanguageContext);
-
-  const handleLanguageChange = (lng: string) => {
-    i18n.changeLanguage(lng);
-    changeLanguage(lng);
-  };
 
   useEffect(() => {
     // Simulate an async operation (e.g., loading data) with a delay
@@ -48,15 +38,10 @@ function Home() {
               liStyles="underline underline-offset-4	"
             />
             {/* <LanguageToggleButton styles="mobile:hidden" /> */}
+
             <Gallery images={homeGalleryCol} />
-            <SideNav
-              navs={rightNavs}
-              styles="right-8 fixed top-[20%] mobile:hidden "
-              language={language}
-              handleClick={() =>
-                handleLanguageChange(language === 'en' ? 'es' : 'en')
-              }
-            />
+
+            <RightNav styles="right-8 fixed top-[20%] mobile:hidden " />
           </main>
           <Footer addClass="mt-20" />
         </div>

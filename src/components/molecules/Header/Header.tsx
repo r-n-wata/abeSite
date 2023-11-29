@@ -1,8 +1,6 @@
-import React, { useState, useContext } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
-import { LanguageContext } from '../../../context/LanguageContext';
-import { rightNavs } from '../../../utils/rightNavs';
+import RightNav from '../../atoms/RightNav';
 import Title from '../../atoms/Title';
 import NavLinks from '../../atoms/NavLinks';
 import './Header.css';
@@ -16,14 +14,6 @@ function Header() {
   const [showMenu, setShowMenu] = useState<boolean>(false);
   const { navs: leftNavs } = SideNavLinks();
 
-  const { i18n } = useTranslation();
-  const { language, changeLanguage } = useContext(LanguageContext);
-
-  const handleLanguageChange = (lng: string) => {
-    i18n.changeLanguage(lng);
-    changeLanguage(lng);
-  };
-
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
@@ -35,10 +25,10 @@ function Header() {
         <Title addClass="mobile:text-[0.7rem] " />
       </Link>
 
-      <nav className={` z-20 text-sm relative `}>
+      <nav className={` z-20 text-sm relative  `}>
         <Hamburger showMenu={showMenu} toggleMenu={toggleMenu} />
         <ul
-          className={`flex list-none justify-end items-start flex-1 mobile:fixed  mobile:flex-col  mobile:-top-2 mobile:-right-0 mobile:bg-gray-50 mobile:h-screen mobile:justify-start mobile:items-start  mobile:pt-10  transition-right duration-500 ease-out  z-10  whitespace-pre-wrap  mobile:max-w-[160px] ${
+          className={`flex list-none justify-end items-start flex-1 mobile:fixed  mobile:flex-col  mobile:-top-2 mobile:-right-0 mobile:bg-gray-50 mobile:h-screen mobile:justify-start mobile:items-start  mobile:pt-10  transition-right duration-500 ease-out  z-10  whitespace-pre-wrap  mobile:max-w-[160px] mobile:w-full mobile:h-screen${
             !showMenu && ' mobile:right-[-14rem] '
           }`}
         >
@@ -78,15 +68,7 @@ function Header() {
             </SideNav>
           </div>
           <div className="relative h-full w-full hidden mobile:block mobile:text-[0.6rem]">
-            <SideNav
-              navs={rightNavs}
-              styles=" mobile:flex absolute bottom-24  pl-4"
-              liStyles="w-[100%] "
-              language={language}
-              handleClick={() =>
-                handleLanguageChange(language === 'en' ? 'es' : 'en')
-              }
-            />
+            <RightNav styles="mobile:flex absolute bottom-24  pl-4" />
           </div>
         </ul>
       </nav>

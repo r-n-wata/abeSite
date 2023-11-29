@@ -7,12 +7,12 @@ function SideNavLinks() {
       {
         id: 1,
         name: t('about'),
-        // subNav: [],
+        link: '/about',
       },
       {
         id: 2,
         name: t('contact'),
-        // subNav: [],
+        link: '/contact',
       },
     ],
   };
