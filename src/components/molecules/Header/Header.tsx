@@ -20,7 +20,7 @@ function Header() {
 
   console.log(showMenu);
   return (
-    <header className="mobile:-mx-16 mobile:mt-4 mobile:pl-4 flex justify-around mt-8 mx-28 text-gray-800 z-10">
+    <header className="mobile:-mx-16 mobile:mt-4 mobile:pl-4 flex justify-around mt-8 mx-28 text-gray-800 z-10 pb-20 mobile:pb-6">
       <Link to="/">
         <Title addClass="mobile:text-[0.7rem] " />
       </Link>
@@ -62,7 +62,7 @@ function Header() {
             <SideNav
               navs={leftNavs}
               styles="mobile:flex  "
-              liStyles="py-4 mobile:hover:bg-gray-100 w-[100%] pl-4"
+              liStyles="py-4 mobile:hover:bg-gray-100 w-[100%] pl-4 -mb-6"
             >
               <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-gray-600 "></span>
             </SideNav>

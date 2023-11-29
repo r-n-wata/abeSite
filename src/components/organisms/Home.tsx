@@ -31,7 +31,7 @@ function Home() {
       ) : (
         <div className="relative h-screen w-screen overflow-x-hidden ">
           <Header />
-          <main className="mb-20 relative">
+          <main className="mb-20 relative overflow-y-scroll h-screen ">
             <SideNav
               navs={leftNavs}
               styles="left-8 text-gray-500 fixed top-[20%] mobile:hidden "

@@ -5,3 +5,7 @@
 * {
   font-family: 'Quicksand', sans-serif;
 }
+
+main {
+  overflow-y: scroll;
+}
