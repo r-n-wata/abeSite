@@ -36,7 +36,7 @@ function About() {
         </div>
 
         <RightNav styles="right-8 fixed top-[20%] mobile:hidden " />
-        <Footer addClass="mt-20" />
+        <Footer addClass="mt-20 relative" />
       </main>
     </section>
   );
