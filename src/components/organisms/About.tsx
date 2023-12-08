@@ -10,7 +10,7 @@ function About() {
   const { navs: leftNavs } = SideNavLinks();
   const p1 = t('aboutParagraphOne').split(' ');
   return (
-    <section className="relative h-screen w-screen overflow-x-hidden  mobile:overflow-hidden ">
+    <section className="relative h-screen w-screen overflow-x-hidden   ">
       <Header />
 
       <main className=" min-h-screen overflow-y-scroll">

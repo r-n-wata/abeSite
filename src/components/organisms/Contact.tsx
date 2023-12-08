@@ -18,7 +18,7 @@ function Contact() {
           liStyles="underline underline-offset-4	"
         />
 
-        <div className="flex mx-36 justify-center items-center flex-col pb-28 mobile:text-[0.86rem] h-full mobile:pb-12 mt-36">
+        <div className="flex mx-36 justify-center items-center flex-col pb-28 mobile:text-[0.86rem] h-full mobile:pb-12 mt-36 mobile:items-start">
           {' '}
           <Separator styles=" w-1/4 flex  justify-start mb-4" />
           <section className="w-full  ">
@@ -45,7 +45,7 @@ function Contact() {
               </li>
             </ul>{' '}
           </section>
-          <Separator styles=" w-1/4 flex  justify-start mt-10" />
+          <Separator styles=" w-1/4 flex  justify-start mt-10 mobile:mt-6" />
         </div>
         <RightNav styles="right-8 fixed top-[20%] mobile:hidden " />
         <Footer />
