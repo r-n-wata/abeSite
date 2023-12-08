@@ -4,7 +4,9 @@ type FooterProps = {
 
 function Footer({ addClass }: FooterProps) {
   return (
-    <footer className={addClass}>
+    <footer
+      className={` absolute bottom-0 flex justify-center w-full ${addClass}`}
+    >
       <p
         className={`text-gray-400 text-sm text-center mb-10 mobile:text-[0.6rem] `}
       >

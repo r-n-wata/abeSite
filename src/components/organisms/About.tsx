@@ -10,10 +10,10 @@ function About() {
   const { navs: leftNavs } = SideNavLinks();
   const p1 = t('aboutParagraphOne').split(' ');
   return (
-    <section className="relative h-screen w-screen overflow-x-hidden ">
+    <section className="relative h-screen w-screen overflow-x-hidden  mobile:overflow-hidden ">
       <Header />
 
-      <main className="mb-20 relative overflow-y-scroll">
+      <main className=" min-h-screen overflow-y-scroll">
         <SideNav
           navs={leftNavs}
           styles="left-8 text-gray-500 fixed top-[20%] mobile:hidden h-screen"

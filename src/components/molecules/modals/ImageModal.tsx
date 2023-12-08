@@ -4,7 +4,12 @@ function ImageModal({
 }: {
   image: {
     image: string;
-    dataSheet: { title: string; description: string; size: string };
+    dataSheet: {
+      title: string;
+      description: string;
+      size: string;
+      price: string;
+    };
   };
   closeModal: () => void;
 }) {
@@ -33,6 +38,7 @@ function ImageModal({
                     {image.dataSheet.description}
                   </span>
                   <p className="mobile:text-[0.6rem]">{image.dataSheet.size}</p>
+                  <p>{image.dataSheet.price}</p>
                 </div>
               )}
             </div>

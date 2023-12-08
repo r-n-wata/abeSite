@@ -11,6 +11,7 @@ type Images = {
       title: string;
       description?: string;
       size?: string;
+      price?: string;
     };
   }[];
 };
@@ -23,12 +24,18 @@ function Gallery({ images }: Images) {
       title: '',
       description: '',
       size: '',
+      price: '',
     },
   });
 
   const toggleModal = (
     image: string,
-    info: { title: string; description?: string; size?: string } = { title: '' }
+    info: {
+      title: string;
+      description?: string;
+      size?: string;
+      price?: string;
+    } = { title: '' }
   ) => {
     setSelectedInfo((prevState) => ({
       image: image,
@@ -36,6 +43,7 @@ function Gallery({ images }: Images) {
         title: info.title,
         description: info.description || '',
         size: info.size || '',
+        price: info.price || '',
       },
     }));
     setShowModal(!showModal);
@@ -43,7 +51,7 @@ function Gallery({ images }: Images) {
 
   return (
     <>
-      <div className="w-full flex justify-center  mobile:mt-6">
+      <div className="w-full flex justify-center mb-10 mobile:mt-6">
         <div className="grid grid-cols-2 gap-2 w-1/2 mobile:w-3/4 mobile:gap-1">
           {images.map((image, i) => {
             return (

@@ -5,6 +5,7 @@ interface IHomeGallery {
     title: string;
     description?: string;
     size?: string;
+    price?: string;
   };
 }
 
@@ -55,6 +56,7 @@ export const homeGalleryCol: IHomeGallery[] = [
       title: 'Estromatolito “O2”, 2023.',
       description: 'Talla directa en mármol negro, piedra caliza.',
       size: '213cm x 122cm x 87cm',
+      price: '',
     },
   },
   {
@@ -73,6 +75,7 @@ export const homeGalleryCol: IHomeGallery[] = [
       title: 'Iceberg, 2023.',
       description: 'Talla directa en piedra caliza, mármol negro mty.',
       size: '259cm x 131cm x 49cm',
+      price: '',
     },
   },
   {

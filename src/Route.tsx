@@ -2,8 +2,13 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './components/organisms/Home';
 import Start from './components/organisms/Start';
 import About from './components/organisms/About';
+import Contact from './components/organisms/Contact';
 
 const router = createBrowserRouter([
+  {
+    path: 'contact',
+    element: <Contact />,
+  },
   {
     path: '/about',
     element: <About />,
